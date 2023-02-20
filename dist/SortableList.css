@@ -1,0 +1,22 @@
+ul, li{
+  list-style-type: none;
+}
+
+.sortable_list .item {
+  padding: 10px 0;
+  border-top: 2px solid transparent;
+}
+
+/* item 하위의 요소들의 마우스 이벤트 없앰 (버블링 나타나지 않음) => 하위 요소들과 이벤트가 겹치지 않도록. */
+.sortable_list .item *{
+  pointer-events: none;
+}
+
+.sortable_list .item.dragstart {
+  opacity: 0.8;
+}
+
+.sortable_list .item.dragover{
+  border-top-color: green;
+  opacity: 0.5;
+}
